@@ -5,7 +5,7 @@ bool CSVTool::WriteCSV(const QVector<QString> headers,
                        const char* codecName)
 {
     QFile file(m_fileName);
-    if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text| QIODevice::Append))
     {
         qDebug() << "fail to open file for writing";
         return false;
